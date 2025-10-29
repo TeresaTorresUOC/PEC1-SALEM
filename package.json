@@ -7,16 +7,18 @@
     "parcel:serve": "parcel -p 8123 --target web",
     "parcel:build": "parcel build --target web --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
+    "copy:views": "mkdir -p dist && cp -R src/views dist/views",
     "dev": "npm-run-all clean parcel:serve",
-    "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
-    "lint:css": "stylelint 'src/assets/**/*.scss'"
+    "build": "npm-run-all clean parcel:build copy:views",
+    "lint:css": "stylelint 'src/assets/**/*.scss'",
+    "test": "echo 'Everything is working as expected ✅\\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
   },
   "targets": {
     "web": {
       "context": "browser",
       "publicUrl": "./",
       "source": "src/index.html",
+      "distDir": "dist",
       "engines": {
         "browsers": "last 2 versions, > 0.5%, not dead"
       }
