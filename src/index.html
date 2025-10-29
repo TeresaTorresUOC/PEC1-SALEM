@@ -1,27 +1,356 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Descubre Salem, Massachusetts: su historia de brujería, los lugares imprescindibles y consejos prácticos para disfrutar de la ciudad."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <!-- do not remove this line! -->
+    <title> UOC Boilerplate Salem Arcana · Guía esencial</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <a class="skip-link" href="#historia">Saltar al contenido principal</a>
+    <div class="site-wrapper">
+      <header class="site-header" id="inicio">
+        <div class="site-header__inner">
+          <nav class="site-nav" aria-label="Navegación principal">
+            <a class="site-nav__logo" href="#inicio">Salem Arcana</a>
+            <button
+              class="site-nav__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-menu"
+            >
+              <span class="visually-hidden">Abrir navegación</span>
+              <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul class="site-nav__menu" id="site-menu">
+              <li><a href="#historia">Historia</a></li>
+              <li><a href="#imprescindibles">Imprescindibles</a></li>
+              <li><a href="#experiencias">Experiencias</a></li>
+              <li><a href="#planifica">Planifica</a></li>
+            </ul>
+          </nav>
+          <div class="hero">
+            <div class="hero__content">
+              <p class="hero__eyebrow">Massachusetts, Estados Unidos</p>
+              <h1 class="hero__title">Salem: crónicas de brujería y resiliencia</h1>
+              <p class="hero__description">
+                Conoce la ciudad que transformó uno de los episodios más oscuros de la
+                historia colonial en una comunidad vibrante que honra la memoria,
+                impulsa la justicia y celebra la creatividad.
+              </p>
+              <div class="hero__actions">
+                <a class="button button--primary" href="#planifica">
+                  <i class="fa-solid fa-hat-wizard" aria-hidden="true"></i>
+                  Planifica tu visita
+                </a>
+                <a class="button button--secondary" href="#experiencias">
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
+                  Explora experiencias
+                </a>
+              </div>
+            </div>
+            <div class="hero__facts">
+              <article class="hero__fact">
+                <i class="fa-solid fa-scroll" aria-hidden="true"></i>
+                <div>
+                  <strong>1692</strong>
+                  <p>Inicio de los juicios por brujería que marcaron para siempre a Salem.</p>
+                </div>
+              </article>
+              <article class="hero__fact">
+                <i class="fa-solid fa-compass" aria-hidden="true"></i>
+                <div>
+                  <strong>20 km de Boston</strong>
+                  <p>Perfecta para una escapada de día o como base para recorrer la costa norte.</p>
+                </div>
+              </article>
+              <article class="hero__fact">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                <div>
+                  <strong>Haunted Happenings</strong>
+                  <p>Festival de octubre con desfiles nocturnos, museos abiertos y tours temáticos.</p>
+                </div>
+              </article>
+              <article class="hero__fact">
+                <i class="fa-solid fa-landmark" aria-hidden="true"></i>
+                <div>
+                  <strong>Distrito histórico</strong>
+                  <p>Arquitectura portuaria, arte público y una ruta interpretativa junto al mar.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main id="contenido">
+         <!-- ================= HISTORIA ================= -->
+        <section class="section history" id="historia">
+          <div class="section__inner">
+            <div class="section__header">
+              <p class="section__eyebrow">Contexto</p>
+              <h2 class="section__title">De puerto colonial a mito global</h2>
+              <p class="section__lead">
+                La historia de Salem no termina en 1692. Aquella tragedia desató siglos de
+                reflexión sobre la justicia, alimentó relatos que inspiraron literatura y cine y
+                moldeó una identidad local comprometida con los derechos civiles y la creatividad.
+              </p>
+            </div>
+            <div class="history__grid">
+              <div class="history__narrative">
+                <p>
+                  En el siglo XVII, Salem era un puerto atlántico en crecimiento. La tensión
+                  social, las disputas religiosas y los miedos colectivos culminaron en los juicios
+                  por brujería, que llevaron a la ejecución de 20 personas inocentes. Hoy, la ciudad
+                  honra su memoria con monumentos y programas educativos que invitan a aprender del
+                  pasado.
+                </p>
+                <p>
+                  Tras la Revolución Industrial, Salem prosperó con el comercio marítimo y la
+                  industria textil. Las mansiones de mercaderes, los muelles históricos y el Peabody
+                  Essex Museum recuerdan esta etapa de esplendor y conectan la ciudad con el mundo a
+                  través de sus colecciones globales.
+                </p>
+                <p>
+                  En la actualidad, Salem combina activismo, arte y turismo responsable. Las voces
+                  de académicos, comunidades Wicca y colectivos locales resignifican la palabra
+                  “bruja” y celebran la diversidad con eventos inclusivos durante todo el año.
+                </p>
+              </div>
+              <ol class="timeline">
+                <li class="timeline__item">
+                  <span class="timeline__year">1692</span>
+                  <p>Histeria colectiva, acusaciones y los tristemente célebres juicios por brujería.</p>
+                </li>
+                <li class="timeline__item">
+                  <span class="timeline__year">1711</span>
+                  <p>El Parlamento de Massachusetts revoca las condenas y compensa a las familias.</p>
+                </li>
+                <li class="timeline__item">
+                  <span class="timeline__year">1892</span>
+                  <p>Salem conmemora el bicentenario con museos y rutas históricas para educar.</p>
+                </li>
+                <li class="timeline__item">
+                  <span class="timeline__year">1970</span>
+                  <p>Estreno de la serie <em>Bewitched</em>, que posiciona a Salem como icono pop.</p>
+                </li>
+                <li class="timeline__item">
+                  <span class="timeline__year">1992</span>
+                  <p>Se inaugura el Memorial a las Víctimas, un espacio solemne para la reflexión.</p>
+                </li>
+                <li class="timeline__item">
+                  <span class="timeline__year">Hoy</span>
+                  <p>La ciudad impulsa turismo sostenible, arte público y foros sobre derechos civiles.</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+         <!-- ================= IMPRESCINDIBLES ================= -->
+        <section class="section" id="imprescindibles">
+          <div class="section__inner">
+            <div class="section__header">
+              <p class="section__eyebrow">Qué ver</p>
+              <h2 class="section__title">Imprescindibles para tu primera visita</h2>
+              <p class="section__lead">
+                Museos, espacios conmemorativos y rincones que conectan el legado marítimo con la
+                memoria de los juicios. Dedica al menos un día completo para recorrerlos con calma.
+              </p>
+            </div>
+            <div class="card-grid">
+              <article class="card">
+                <i class="fa-solid fa-book-skull" aria-hidden="true"></i>
+                <h3 class="card__title">Salem Witch Museum</h3>
+                <p>
+                  Una experiencia inmersiva con testimonios históricos y representaciones que
+                  contextualizan las acusaciones de 1692.
+                </p>
+                <a href="https://salemwitchmuseum.com/" target="_blank" rel="noreferrer noopener">
+                  Sitio oficial
+                </a>
+              </article>
+              <article class="card">
+                <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                <h3 class="card__title">Salem Witch Trials Memorial</h3>
+                <p>
+                  Espacio al aire libre que honra a las víctimas con bancas de piedra y fragmentos
+                  de sus declaraciones finales.
+                </p>
+                <a href="https://www.salem.org/listing/salem-witch-trials-memorial/" target="_blank" rel="noreferrer noopener">
+                  Información práctica
+                </a>
+              </article>
+              <article class="card">
+                <i class="fa-solid fa-ship" aria-hidden="true"></i>
+                <h3 class="card__title">Peabody Essex Museum</h3>
+                <p>
+                  Colecciones marítimas, arte contemporáneo y la Casa Yin Yu Tang, transportada desde
+                  China, que muestran la dimensión global de Salem.
+                </p>
+                <a href="https://www.pem.org/" target="_blank" rel="noreferrer noopener">
+                  Planifica tu visita
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- ================= EXPERIENCIAS ================= -->
+        <section class="section" id="experiencias">
+          <div class="section__inner">
+            <div class="section__header">
+              <p class="section__eyebrow">Vívelo</p>
+              <h2 class="section__title">Experiencias y rutas temáticas</h2>
+              <p class="section__lead">
+                Desde recorridos nocturnos a talleres de herbolaria, Salem ofrece propuestas para
+                curiosos, familias y amantes del misterio durante todo el año.
+              </p>
+            </div>
+            <div class="card-grid">
+              <article class="card">
+                <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+                <h3 class="card__title">Salem Heritage Trail</h3>
+                <p>
+                  Sigue la línea dorada que atraviesa el centro histórico y conecta 400 años de
+                  arquitectura, arte público y anécdotas marítimas.
+                </p>
+              </article>
+              <article class="card">
+                <i class="fa-solid fa-broom-ball" aria-hidden="true"></i>
+                <h3 class="card__title">Tours nocturnos guiados</h3>
+                <p>
+                  Historias documentadas y leyendas urbanas se entrelazan en paseos que recorren
+                  cementerios, casas encantadas y callejones iluminados por faroles.
+                </p>
+              </article>
+              <article class="card">
+                <i class="fa-solid fa-masks-theater" aria-hidden="true"></i>
+                <h3 class="card__title">Haunted Happenings</h3>
+                <p>
+                  En octubre, la ciudad se transforma con desfiles, mercado de artesanos, lecturas de
+                  tarot y conciertos en vivo para todas las edades.
+                </p>
+              </article>
+            </div>
+            <ul class="list-highlight">
+              <li>
+                <i class="fa-solid fa-mortar-pestle" aria-hidden="true"></i>
+                <div>
+                  <strong>Talleres de alquimia moderna</strong>
+                  <p>Aprende sobre herbolaria, cristales y rituales contemporáneos en tiendas locales.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-camera-retro" aria-hidden="true"></i>
+                <div>
+                  <strong>Photo walks temáticos</strong>
+                  <p>Guías profesionales te ayudan a capturar la ciudad con luz crepuscular.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                <div>
+                  <strong>Sabores de temporada</strong>
+                  <p>Cafés y restaurantes ofrecen menús inspirados en ingredientes locales y especias.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i>
+                <div>
+                  <strong>Charlas y lecturas</strong>
+                  <p>Bibliotecas y librerías organizan clubes de lectura y encuentros con autores.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- ================= PLANIFICA ================= -->
+        <section class="section plan" id="planifica">
+          <div class="section__inner">
+            <div class="section__header">
+              <p class="section__eyebrow">Organiza</p>
+              <h2 class="section__title">Consejos prácticos para tu viaje</h2>
+              <p class="section__lead">
+                Salem es accesible, caminable y acogedora en cualquier estación. Estos consejos te
+                ayudarán a aprovechar el tiempo y conectar con la comunidad local.
+              </p>
+            </div>
+            <div class="plan__grid">
+              <div>
+                <h3 class="card__title">Cómo llegar</h3>
+                <p>
+                  Desde Boston, toma la línea Newburyport/Rockport del <em>commuter rail</em> en North
+                  Station (35 minutos) o el ferry estacional que cruza la bahía en menos de una hora.
+                  Si prefieres conducir, la Route 1A ofrece vistas costeras espectaculares.
+                </p>
+                <h3 class="card__title">Mejor época</h3>
+                <p>
+                  Octubre es el mes más festivo, pero también el más concurrido. Primavera y finales
+                  de verano brindan clima suave, eventos culturales y menos afluencia turística.
+                </p>
+                <h3 class="card__title">Respeto y memoria</h3>
+                <p>
+                  Recuerda que muchos espacios son conmemorativos. Evita disfraces irrespetuosos,
+                  mantén el silencio en cementerios y apoya proyectos educativos que combaten la
+                  desinformación.
+                </p>
+              </div>
+              <aside class="plan__cta" aria-label="Recursos útiles">
+                <strong>Recursos oficiales</strong>
+                <p>
+                  Visita <a href="https://www.salem.org/" target="_blank" rel="noreferrer noopener">Destination Salem</a>
+                  para mapas descargables, calendario de eventos y pases combinados para museos.
+                </p>
+                <p>
+                  Si viajas en octubre, reserva con antelación y utiliza el <em>shuttle</em> gratuito
+                  que conecta los estacionamientos periféricos con el centro.
+                </p>
+                <a class="button button--primary" href="https://www.mbta.com/schedules/CR-Newburyport/timetable" target="_blank" rel="noreferrer noopener">
+                  <i class="fa-solid fa-train-subway" aria-hidden="true"></i>
+                  Horarios MBTA
+                </a>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <div class="cta-banner">
+          <p class="hero__eyebrow">Planifica con intención</p>
+          <h2 class="cta-banner__title">Haz de tu visita a Salem una experiencia consciente</h2>
+          <p>
+            Cada tour, museo y conversación es una oportunidad para honrar a quienes fueron
+            injustamente acusados y apoyar a la comunidad actual. Elige operadores locales, escucha
+            múltiples voces y comparte lo aprendido.
+          </p>
+          <div class="cta-banner__actions">
+            <a class="button button--secondary" href="#inicio">
+              <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+              Volver al inicio
+            </a>
+            <a class="button button--primary" href="mailto:turismo@salem.org">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              Contacta a la oficina de turismo
+            </a>
+          </div>
+        </div>
+      </main>
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <div id="footer"></div>
+  <script type="module" src="./assets/scripts/main.js"></script>
+  <script>
+    fetch('./views/footer.html')
+      .then(r => r.text())
+      .then(html => { document.getElementById('footer').innerHTML = html; });
+  </script>
   </body>
 </html>

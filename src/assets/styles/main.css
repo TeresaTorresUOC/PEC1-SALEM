@@ -1,21 +1,32 @@
-@use "../variables";
-
+@charset "UTF-8";
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+/**
+* Import dependencies
+*/
+/**
+ * Import layouts
+ * It's a best practice to use a different partial for each page
+ */
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: variables.$font-family-sans-serif;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   line-height: 1.6;
-  background: radial-gradient(circle at top, rgb(161, 138, 255, 0.22), transparent 60%),
-    #f7f5ff;
-  color: variables.$salem-ink;
+  background: radial-gradient(circle at top, rgba(161, 138, 255, 0.22), transparent 60%), #f7f5ff;
+  color: #320810;
 }
+
 a {
   color: inherit;
   text-decoration-thickness: 0.12em;
@@ -25,12 +36,14 @@ a {
 
 a:hover,
 a:focus {
-  color: variables.$salem-ember;
+  color: #ff6f59;
 }
+
 img {
   max-width: 100%;
   display: block;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -47,8 +60,8 @@ img {
   position: absolute;
   left: -9999px;
   top: 1rem;
-  background: variables.$salem-ember;
-  color: variables.$salem-night;
+  background: #ff6f59;
+  color: #21060c;
   padding: 0.75rem 1.25rem;
   border-radius: 999px;
   font-weight: 600;
@@ -71,18 +84,15 @@ img {
   position: relative;
   min-height: 100vh;
   padding: 1.5rem clamp(1.5rem, 4vw, 3.5rem) 3.5rem;
-  background: linear-gradient(145deg, rgb(33, 6, 12, 0.92), rgb(50, 8, 16, 0.8)),
-    url("../images/salem-witch-museum.svg") center/cover no-repeat;
+  background: linear-gradient(145deg, rgba(33, 6, 12, 0.92), rgba(50, 8, 16, 0.8)), url("../images/salem-witch-museum.svg") center/cover no-repeat;
   color: #fff5f6;
 }
-
 
 .site-header::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgb(255, 111, 89, 0.45), transparent 55%),
-    radial-gradient(circle at bottom right, rgb(215, 38, 61, 0.38), transparent 60%);
+  background: radial-gradient(circle at top left, rgba(255, 111, 89, 0.45), transparent 55%), radial-gradient(circle at bottom right, rgba(215, 38, 61, 0.38), transparent 60%);
   pointer-events: none;
   mix-blend-mode: screen;
 }
@@ -102,7 +112,7 @@ img {
 }
 
 .site-nav__logo {
-  font-family: variables.$font-family-serif;
+  font-family: "Playfair Display", "Georgia", "Times New Roman", serif;
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -115,8 +125,8 @@ img {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  border: 1px solid rgb(255, 255, 255, 0.35);
-  background: rgb(33, 6, 12, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(33, 6, 12, 0.45);
   color: inherit;
   cursor: pointer;
   transition: background 0.2s ease, border 0.2s ease;
@@ -124,8 +134,8 @@ img {
 
 .site-nav__toggle:hover,
 .site-nav__toggle:focus {
-  background: rgb(255, 255, 255, 0.12);
-  border-color: rgb(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .site-nav__menu {
@@ -142,68 +152,64 @@ img {
 .site-nav__menu a {
   text-decoration: none;
   padding: 0.35rem 0;
-  border-bottom: 1px solid rgb(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .site-nav__menu a:hover,
 .site-nav__menu a:focus {
-  color: variables.$salem-ember;
-  border-color: rgb(255, 111, 89, 0.5);
+  color: #ff6f59;
+  border-color: rgba(255, 111, 89, 0.5);
 }
 
 .site-nav__menu.is-open {
   display: flex;
 }
 
-@media (min-width: variables.$mqMinWidth) {
+@media (min-width: 42rem) {
   .site-header {
     padding-top: 2.5rem;
   }
-
-.site-nav__toggle {
-  display: none;
-}
-
-.site-nav__menu {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  gap: clamp(1.5rem, 4vw, 3rem);
-}
-
-.site-nav__menu a {
-  border-bottom: 2px solid transparent;
-  padding: 0.5rem 0;
-}
+  .site-nav__toggle {
+    display: none;
+  }
+  .site-nav__menu {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+  .site-nav__menu a {
+    border-bottom: 2px solid transparent;
+    padding: 0.5rem 0;
+  }
 }
 .hero {
-margin-top: clamp(3rem, 8vw, 6rem);
-display: grid;
-gap: clamp(2rem, 6vw, 3.5rem);
+  margin-top: clamp(3rem, 8vw, 6rem);
+  display: grid;
+  gap: clamp(2rem, 6vw, 3.5rem);
 }
+
 .hero__eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.4em;
   font-size: 0.75rem;
-  color: rgb(255, 240, 243, 0.75);
+  color: rgba(255, 240, 243, 0.75);
 }
 
-
 .hero__title {
-  font-family: variables.$font-family-display;
+  font-family: "Staatliches", "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(2.7rem, 5vw, 4.75rem);
   line-height: 1.1;
   margin: 0.5rem 0 1rem;
   text-transform: uppercase;
-  color: variables.$salem-lilac;
-  text-shadow: 0 20px 45px rgb(14, 0, 4, 0.7);
+  color: #d7263d;
+  text-shadow: 0 20px 45px rgba(14, 0, 4, 0.7);
 }
-
 
 .hero__description {
   max-width: 36rem;
   font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-  color: rgb(255, 240, 243, 0.86);
+  color: rgba(255, 240, 243, 0.86);
 }
 
 .hero__actions {
@@ -228,7 +234,7 @@ gap: clamp(2rem, 6vw, 3.5rem);
 }
 
 .button--primary {
-  background: variables.$salem-lilac;
+  background: #d7263d;
   color: #fff;
   box-shadow: 0 18px 35px rgba(215, 38, 61, 0.35);
 }
@@ -238,11 +244,11 @@ gap: clamp(2rem, 6vw, 3.5rem);
   color: #fff5f6;
 }
 
-
 .button:hover,
 .button:focus {
   transform: translateY(-2px);
 }
+
 .hero__facts {
   display: grid;
   gap: 1rem;
@@ -257,24 +263,23 @@ gap: clamp(2rem, 6vw, 3.5rem);
   border-radius: 1rem;
   background: rgba(26, 5, 9, 0.55);
   backdrop-filter: blur(6px);
-  border: 1px solid rgb(255, 240, 243, 0.12);
+  border: 1px solid rgba(255, 240, 243, 0.12);
 }
 
 .hero__fact i {
   font-size: 1.5rem;
-  color: variables.$salem-ember;
+  color: #ff6f59;
 }
 
 .hero__fact strong {
   font-size: 1.05rem;
 }
 
-@media (min-width: variables.$mqWide) {
+@media (min-width: 64rem) {
   .hero {
     grid-template-columns: 1fr 0.75fr;
     align-items: end;
   }
-
   .hero__facts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 0;
@@ -283,7 +288,7 @@ gap: clamp(2rem, 6vw, 3.5rem);
 main {
   position: relative;
   z-index: 1;
-  background: linear-gradient(180deg, rgb(253, 247, 247, 1), rgb(255, 255, 255, 0.95));
+  background: linear-gradient(180deg, rgb(253, 247, 247), rgba(255, 255, 255, 0.95));
 }
 
 .section {
@@ -305,28 +310,28 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.35em;
   font-size: 0.75rem;
-  color: rgb(16, 9, 38, 0.5);
+  color: rgba(16, 9, 38, 0.5);
 }
 
 .section__title {
   margin: 0;
-  font-family: variables.$font-family-display;
+  font-family: "Staatliches", "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(2rem, 3.5vw, 3rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: variables.$salem-lilac;
+  color: #d7263d;
 }
 
 .section__lead {
   max-width: 48rem;
   font-size: 1.1rem;
-  color: rgb(33, 6, 12, 0.75);
+  color: rgba(33, 6, 12, 0.75);
 }
 
 .history {
   background: #fff;
   border-radius: clamp(2rem, 6vw, 3rem);
-  box-shadow: 0 22px 60px rgb(33, 6, 12, 0.08);
+  box-shadow: 0 22px 60px rgba(33, 6, 12, 0.08);
 }
 
 .history__grid {
@@ -338,7 +343,7 @@ main {
   display: grid;
   gap: 1.25rem;
   padding-left: 1rem;
-  border-left: 2px solid rgb(215, 38, 61, 0.4);
+  border-left: 2px solid rgba(215, 38, 61, 0.4);
 }
 
 .timeline__item {
@@ -354,33 +359,32 @@ main {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
-  background: variables.$salem-lilac;
-  box-shadow: 0 0 0 4px rgb(215, 38, 61, 0.15);
+  background: #d7263d;
+  box-shadow: 0 0 0 4px rgba(215, 38, 61, 0.15);
 }
 
 .timeline__year {
   font-weight: 700;
-  color: variables.$salem-lilac;
+  color: #d7263d;
 }
 
-@media (min-width: variables.$mqWide) {
+@media (min-width: 64rem) {
   .history__grid {
     grid-template-columns: 1fr 1fr;
     align-items: start;
   }
 }
-
 .card-grid {
   display: grid;
   gap: 1.5rem;
 }
 
 .card {
-  background: linear-gradient(135deg, rgb(215, 38, 61, 0.1), rgb(255, 247, 247, 0.9));
-  border: 1px solid rgb(215, 38, 61, 0.18);
+  background: linear-gradient(135deg, rgba(215, 38, 61, 0.1), rgba(255, 247, 247, 0.9));
+  border: 1px solid rgba(215, 38, 61, 0.18);
   border-radius: 1.5rem;
   padding: 2rem;
-  box-shadow: 0 18px 35px rgb(33, 6, 12, 0.08);
+  box-shadow: 0 18px 35px rgba(33, 6, 12, 0.08);
   display: grid;
   gap: 0.75rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -389,35 +393,33 @@ main {
 .card:hover,
 .card:focus-within {
   transform: translateY(-4px);
-  box-shadow: 0 24px 45px rgb(33, 6, 12, 0.12);
+  box-shadow: 0 24px 45px rgba(33, 6, 12, 0.12);
 }
 
 .card i {
   font-size: 1.75rem;
-  color: variables.$salem-ember;
+  color: #ff6f59;
 }
 
 .card__title {
   margin: 0;
   font-size: 1.5rem;
-  font-family: variables.$font-family-display;
+  font-family: "Staatliches", "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: variables.$salem-lilac;
+  color: #d7263d;
 }
 
-@media (min-width: variables.$mqMinWidth) {
+@media (min-width: 42rem) {
   .card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
-@media (min-width: variables.$mqWide) {
+@media (min-width: 64rem) {
   .card-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
 .list-highlight {
   display: grid;
   gap: 1rem;
@@ -434,24 +436,23 @@ main {
   padding: 1rem 1.25rem;
   border-radius: 1.25rem;
   background: #fff;
-  box-shadow: inset 0 0 0 1px rgb(215, 38, 61, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(215, 38, 61, 0.18);
 }
 
 .list-highlight i {
   font-size: 1.25rem;
-  color: variables.$salem-lilac;
+  color: #d7263d;
 }
 
-@media (min-width: variables.$mqMinWidth) {
+@media (min-width: 42rem) {
   .list-highlight {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 .plan {
-  background: linear-gradient(135deg, rgb(215, 38, 61, 0.12), rgb(33, 6, 12, 0.06));
+  background: linear-gradient(135deg, rgba(215, 38, 61, 0.12), rgba(33, 6, 12, 0.06));
   border-radius: clamp(2rem, 6vw, 3rem);
-  box-shadow: 0 22px 60px rgb(33, 6, 12, 0.08);
+  box-shadow: 0 22px 60px rgba(33, 6, 12, 0.08);
 }
 
 .plan__grid {
@@ -464,27 +465,26 @@ main {
   gap: 1rem;
   padding: 2rem;
   border-radius: 1.75rem;
-  background: rgb(33, 6, 12, 0.08);
+  background: rgba(33, 6, 12, 0.08);
 }
 
 .plan__cta strong {
   font-size: 1.2rem;
 }
 
-@media (min-width: variables.$mqMinWidth) {
+@media (min-width: 42rem) {
   .plan__grid {
     grid-template-columns: 1.5fr 1fr;
     align-items: start;
   }
 }
-
 .cta-banner {
   padding: clamp(3rem, 7vw, 4.5rem);
   margin: clamp(3rem, 6vw, 4rem) auto;
-  background: linear-gradient(120deg, #540d1a, variables.$salem-night);
+  background: linear-gradient(120deg, #540d1a, #21060c);
   color: #fff5f6;
   border-radius: clamp(2rem, 6vw, 3rem);
-  box-shadow: 0 24px 50px rgb(33, 6, 12, 0.45);
+  box-shadow: 0 24px 50px rgba(33, 6, 12, 0.45);
   text-align: center;
   display: grid;
   gap: 1.5rem;
@@ -492,11 +492,11 @@ main {
 
 .cta-banner__title {
   margin: 0;
-  font-family: variables.$font-family-display;
+  font-family: "Staatliches", "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: variables.$salem-ember;
+  color: #ff6f59;
 }
 
 .cta-banner__actions {
@@ -507,8 +507,8 @@ main {
 }
 
 footer {
-  background: variables.$salem-night;
-  color: rgb(255, 240, 243, 0.75);
+  background: #21060c;
+  color: rgba(255, 240, 243, 0.75);
   padding: 2.5rem clamp(1.5rem, 6vw, 4rem) 2rem;
 }
 
@@ -525,11 +525,11 @@ footer {
 }
 
 .footer__brand {
-  font-family: variables.$font-family-display;
+  font-family: "Staatliches", "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: variables.$salem-ember;
+  color: #ff6f59;
 }
 
 .footer__social {
@@ -538,14 +538,14 @@ footer {
 }
 
 .footer__social a {
-  color: rgb(255, 240, 243, 0.75);
+  color: rgba(255, 240, 243, 0.75);
   font-size: 1.35rem;
   transition: color 0.2s ease;
 }
 
 .footer__social a:hover,
 .footer__social a:focus {
-  color: variables.$salem-ember;
+  color: #ff6f59;
 }
 
 .footer__bottom {
@@ -562,29 +562,28 @@ footer {
 }
 
 .footer__links a {
-  color: rgb(255, 240, 243, 0.75);
+  color: rgba(255, 240, 243, 0.75);
 }
 
 .footer__links a:hover,
 .footer__links a:focus {
-  color: variables.$salem-ember;
+  color: #ff6f59;
 }
 
-@media (min-width: variables.$mqMinWidth) {
+@media (min-width: 42rem) {
   .footer__top {
     grid-template-columns: 1.4fr 1fr;
     align-items: center;
   }
 }
-
-@media (min-width: variables.$mqWide) {
+@media (min-width: 64rem) {
   .footer__inner {
     grid-template-columns: 1fr;
   }
 }
 styleguide {
   background: #fdf7f7;
-  color: variables.$salem-ink;
+  color: #320810;
 }
 
 .styleguide__block {
@@ -604,21 +603,21 @@ styleguide {
   border-radius: 1rem;
   padding: 1.25rem;
   box-shadow: 0 12px 25px rgba(33, 6, 12, 0.08);
-  border: 1px solid rgb(215, 38, 61, 0.12);
+  border: 1px solid rgba(215, 38, 61, 0.12);
   display: grid;
   gap: 0.35rem;
   text-align: center;
-  color: variables.$salem-ink;
+  color: #320810;
 }
 
 .styleguide__swatch::before {
   content: "";
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   border-radius: 0.85rem;
   background: var(--swatch-color);
-  box-shadow: inset 0 0 0 1px rgb(0, 0, 0, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .styleguide__typography {
@@ -641,54 +640,54 @@ styleguide {
   gap: 1.5rem;
 }
 
-@media (min-width: variables.$mqMinWidth) {
+@media (min-width: 42rem) {
   .styleguide__components {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
-@media (min-width: variables.$mqWide) {
+@media (min-width: 64rem) {
   .footer__inner {
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 1024px) { 
+@media (max-width: 1024px) {
   .site-nav__menu {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
-
 @media (max-width: 768px) {
   .site-nav__menu {
     display: flex;
-    flex-direction: row; 
-    overflow-x: auto; 
-    -webkit-overflow-scrolling: touch; 
-    white-space: nowrap; 
+    flex-direction: row; /* important: en línia horitzontal */
+    overflow-x: auto; /* permet scroll horitzontal */
+    -webkit-overflow-scrolling: touch; /* scroll suau en mòbil */
+    white-space: nowrap; /* evita que les paraules trenquen línia */
     gap: 1.5rem;
     padding: 0.75rem 1rem;
-    background: rgb(33, 6, 12, 0.9); 
+    background: rgba(33, 6, 12, 0.9); /* lleuger fons per diferenciar */
     border-radius: 2rem;
     width: 100%;
   }
-
   .site-nav__menu li {
-    flex: 0 0 auto; 
+    flex: 0 0 auto; /* cada element manté la seua amplària */
   }
-
   .site-nav__menu a {
-    border-bottom: none; 
+    border-bottom: none; /* opcional: més net en mòbil */
     text-decoration: none;
     display: inline-block;
   }
-
+  /* amaguem el toggle (hamburguesa) si no vols desplegable */
   .site-nav__toggle {
     display: none;
   }
-
-
+  /* ocultar la barra d’scroll (opcional) */
   .site-nav__menu::-webkit-scrollbar {
     display: none;
   }
 }
+/**
+ * Do NOT include anything else in this file!
+ */
+
+/*# sourceMappingURL=main.css.map */

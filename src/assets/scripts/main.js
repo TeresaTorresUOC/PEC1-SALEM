@@ -1,16 +1,29 @@
-/**
- * Import dependencies from node_modules
- * see commented examples below
- */
+import "@fortawesome/fontawesome-free/css/all.min.css";
+(() => {
+  const navigationToggle = document.querySelector(".site-nav__toggle");
+  const navigationMenu = document.querySelector(".site-nav__menu");
 
-// import 'some-node-module';
-// import SomeModule from 'some-node-module';
+  if (navigationToggle instanceof HTMLButtonElement && navigationMenu instanceof HTMLElement) {
+    const toggleMenu = () => {
+      const expanded = navigationToggle.getAttribute("aria-expanded") === "true";
+      navigationToggle.setAttribute("aria-expanded", String(!expanded));
+      navigationMenu.classList.toggle("is-open", !expanded);
+    };
 
-/**
- * Write any other JavaScript below
- */
+    navigationToggle.addEventListener("click", toggleMenu);
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
+    navigationMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (navigationToggle.getAttribute("aria-expanded") === "true") {
+          toggleMenu();
+        }
+      });
+    });
+  }
+
+  const currentYearElement = document.querySelector("[data-current-year]");
+  if (currentYearElement) {
+    currentYearElement.textContent = String(new Date().getFullYear());
+    
+  }
+})();
